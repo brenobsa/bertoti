@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.badge {
+    background: #e0e7ff;
+    color: #4338ca;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.app-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+
+.app-header p {
+    color: #64748b;
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 24px;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.card-treino {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-treino:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.07);
+}
+
+.banner-treino {
+    background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 18px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+/* Botões de Ação Inline (Editar, Salvar, Cancelar) */
+.bloco-acoes {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.btn-icon:hover {
+    background: #e2e8f0;
+    transform: scale(1.1);
+}
+
+.edit-input {
+    padding: 6px 8px !important;
+    font-size: 0.85rem !important;
+}
+.grid-linha {
+    display: grid;
+    grid-template-columns: 2fr 0.9fr 0.9fr 65px;
+    gap: 6px;
+    align-items: center;
+}
+.cabecalho-coluna {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    padding: 6px 4px;
+}
+
+.cabecalho-coluna.exercicio {
+    text-align: left;
+    padding-left: 14px;
+}
+
+.lista-itens {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 50px;
+}
+
+.item-linha {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 6px 8px;
+    border: 1px solid #f1f5f9;
+}
+
+.bloco-dado {
+    padding: 8px 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    color: #334155;
+}
+
+.bloco-dado.nome {
+    text-align: left;
+    padding-left: 8px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+    padding-top: 14px;
+    border-top: 1px dashed #e2e8f0;
+}
+
+.input-app {
+    width: 100%;
+    background: #f1f5f9;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1e293b;
+    outline: none;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.input-app.text {
+    text-align: left;
+}
+
+.input-app:focus {
+    background: #ffffff;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+}
+
+.btn-acao {
+    background: #0f172a;
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    padding: 12px 20px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-acao:hover {
+    background: #1e293b;
+    transform: scale(1.01);
+}
+
+.btn-acao:active {
+    transform: scale(0.98);
+}
+
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #94a3b8;
+    font-weight: 600;
+    padding: 40px;
+}
